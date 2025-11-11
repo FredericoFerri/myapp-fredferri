@@ -45,7 +45,7 @@ The meaning of the parts of this scaffold command is as follows:
 One of the files this scaffold generator creates is a database migration. Open the file `db/migrate/<timestamp created>_create_products.rb` in an editor. It should contain:
 
 ```
-class CreateProducts < ActiveRecord::Migration[7.0]
+class CreateProducts < ActiveRecord::Migration[8.0]
   def change
     create_table :products do |t|
       t.string :name
@@ -142,7 +142,7 @@ Lets take a look at the update action that has been generated in the `ProductsCo
 ```
 # Use callbacks to share common setup or constraints between actions.
 def set_product
-  @product = Product.find(params[:id])
+  @product = Product.find(params.expect(:id))
 end
 ```
 
@@ -158,7 +158,7 @@ def create
   @product = Product.new(product_params)
 
   if @product.save
-    <strong>redirect_to @product, notice: "Product was successfully created.", status: :see_other</strong>
+    <strong>redirect_to @product, notice: "Product was successfully created."</strong>
   else
     render :new, status: :unprocessable_entity
   end
@@ -173,7 +173,7 @@ def create
   @product = Product.new(product_params)
 
   if @product.save
-    <strong>redirect_to products_path, notice: "Product was successfully created.", status: :see_other</strong>
+    <strong>redirect_to products_path, notice: "Product was successfully created."</strong>
   else
     render :new, status: :unprocessable_entity
   end
