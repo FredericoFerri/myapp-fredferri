@@ -4,12 +4,12 @@
 
 In this worksheet we will introduce you to the Ruby on Rails web framework by building a simple ecommerce application. You can use existing sites like Amazon as inspiration.
 
-If you have difficulties please refer to the content on https://learn.shefcompsci.org.uk, the Rails guides at https://guides.rubyonrails.org/v7.0/, or ask for help.
+If you have difficulties please refer to the content on https://learn.shefcompsci.org.uk, the Rails guides at https://guides.rubyonrails.org/v8.0/, or ask for help.
 
 ## Preparation
 Check out the starter code with:
 ```
-git clone git@git.shefcompsci.org.uk:com3420-2025-26/materials/introduction-to-rails.git
+git clone git@git.shefcompsci.org.uk:com213-2025-26/materials/introduction-to-rails.git
 ```
 
 Then run the following commands to setup the project:
@@ -111,7 +111,7 @@ root "products#index"
 
 This code says that when we go to the `/` path in our application the `index` method of the `app/controllers/products_controller.rb` controller will be run and the the template in `app/views/products/index.html.haml` will be used to render output to the browser.
 
-Start your application (run `bundle exec rails s`) and then go to http://localhost:3000 in a web browser to see what you have done. If you were already running the Rails server, you will need to restart it to see changes made to your routes.
+Start your application (run `bundle exec rails s`) and then go to http://localhost:3000 in a web browser to see what you have done
 
 You should now be able to add, edit, delete and show products in your ecommerce application. Spend some time interacting with your application to see what the scaffold generates for you. It is also important to try and understand how this works in terms of the code in the `app/controllers/products_controller.rb` file and the view files in the `app/views/products` folder.
 
