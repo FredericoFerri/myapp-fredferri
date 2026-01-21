@@ -5,8 +5,8 @@ default: &default
 
 development:
   <<: *default
-  database: project_development
+  database: ecommerce_1_development
 
 test:
   <<: *default
-  database: project_test
+  database: ecommerce_1_test
