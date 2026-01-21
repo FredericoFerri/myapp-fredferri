@@ -160,7 +160,7 @@ def create
   if @product.save
     <strong>redirect_to @product, notice: "Product was successfully created."</strong>
   else
-    render :new, status: :unprocessable_entity
+    render :new, status: :unprocessable_content
   end
 end
 </pre>
@@ -175,7 +175,7 @@ def create
   if @product.save
     <strong>redirect_to products_path, notice: "Product was successfully created."</strong>
   else
-    render :new, status: :unprocessable_entity
+    render :new, status: :unprocessable_content
   end
 end
 </pre>
