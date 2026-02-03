@@ -4,7 +4,7 @@
 
 In this worksheet we will introduce you to the Ruby on Rails web framework by building a simple ecommerce application. You can use existing sites like Amazon as inspiration.
 
-If you have difficulties please refer to the content on https://learn.shefcompsci.org.uk, the Rails guides at https://guides.rubyonrails.org/v8.0/, or ask for help.
+If you have difficulties please refer to the content on https://vle.shef.ac.uk, the Rails guides at https://guides.rubyonrails.org/v8.0/, or ask for help.
 
 ## Preparation
 Check out the starter code with:
