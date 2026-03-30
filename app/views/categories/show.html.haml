@@ -1,0 +1,14 @@
+.row.justify-content-center
+  .col-sm-8.col-lg-6
+    .card
+      .card-header
+        Category details
+      .card-body
+        %dl.row.mb-0
+          %dt.col-md-3 Code:
+          %dd.col-md-9= @category.code
+          %dt.col-md-3 Name:
+          %dd.col-md-9= @category.name
+      .card-footer.d-flex
+        = link_to 'Edit', edit_category_path(@category), class: 'btn btn-link'
+        = link_to 'Back', categories_path, class: 'btn btn-link ms-auto'

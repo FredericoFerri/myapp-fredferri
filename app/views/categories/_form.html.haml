@@ -1,0 +1,9 @@
+= simple_form_for(@category) do |f|
+    .card-body
+        = f.input :code, wrapper_html: { class: 'mb-3' }
+        = f.input :name, wrapper_html: { class: 'mb-3' }
+        
+    .card-footer.d-flex
+        %button.btn.btn-primary{ type: 'submit' }
+            Save
+        = link_to 'Back', categories_path, class: 'btn btn-link ms-auto'
