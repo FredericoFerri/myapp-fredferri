@@ -26,7 +26,7 @@ class CategoriesController < ApplicationController
             @category = Category.new(category_params)
 
             if @category.save
-                redirect_to new_category_path, notice: 'Category was created.'
+                redirect_to categories_path, notice: 'Category was created.'
             else
                 render :new
             end
@@ -55,6 +55,6 @@ class CategoriesController < ApplicationController
 
         # Only allow a list of trusted parameters through.
         def category_params
-        params.expect(category: [ :name, :description, :cost ])
+        params.expect(category: [ :code, :name ])
         end
 end

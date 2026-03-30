@@ -1,0 +1,13 @@
+.container.mt-5
+  .row
+    .col-md-6
+      .card.p-4.text-center
+        %h5 Products
+        %p Product management
+        = link_to 'Products', products_path, class: 'btn btn-primary'
+
+    .col-md-6
+      .card.p-4.text-center
+        %h5 Categories
+        %p Category management 
+        = link_to 'Categories', categories_path, class: 'btn btn-secondary'
