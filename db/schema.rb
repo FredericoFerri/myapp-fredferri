@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_03_06_160436) do
+ActiveRecord::Schema[8.0].define(version: 2026_04_02_105857) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -19,6 +19,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_06_160436) do
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "shipping_cost"
+    t.integer "handling_percentage"
+    t.decimal "vat_rate"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -42,6 +45,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_06_160436) do
     t.decimal "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "stock_level"
+    t.bigint "category_id", null: false
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -52,4 +58,6 @@ ActiveRecord::Schema[8.0].define(version: 2026_03_06_160436) do
     t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
     t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
+
+  add_foreign_key "products", "categories"
 end
